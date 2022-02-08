@@ -9,7 +9,7 @@ while line=gets do
   lat = arr[3]
   lng = arr[4]
 
-  sql = "insert into uprns (uprn,g) values (#{uprn}, st_geomfromtext('point(#{lng} #{lat})'));"
+  sql = "insert into centroids (id,centroid) values (#{uprn}, st_geomfromtext('point(#{lng} #{lat})'));"
 
   puts sql
 end
