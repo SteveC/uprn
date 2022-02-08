@@ -72,3 +72,4 @@ group :test do
 end
 
 gem 'activerecord-postgis-adapter'
+gem 'pg'
