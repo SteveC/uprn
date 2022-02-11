@@ -73,3 +73,5 @@ end
 
 gem 'activerecord-postgis-adapter'
 gem 'pg'
+gem 'zlib'
+gem 'activerecord-import'

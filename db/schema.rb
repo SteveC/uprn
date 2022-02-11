@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_11_200136) do
+ActiveRecord::Schema.define(version: 2022_02_11_201811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "postgis"
+
+  create_table "centroids", force: :cascade do |t|
+    t.geography "lonlat", limit: {:srid=>4326, :type=>"st_point", :geographic=>true}
+  end
 
 end
