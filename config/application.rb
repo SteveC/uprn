@@ -2,6 +2,10 @@ require_relative "boot"
 
 require "rails/all"
 
+# select count(*) is expensive in postgres
+# FIXME dynamically get this on startup
+$centroid_count = 39919499
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -18,5 +22,6 @@ module Uprn
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
   end
 end
