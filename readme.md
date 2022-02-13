@@ -1,0 +1,1 @@
+read data/readme.md before `rails db:migrate`
